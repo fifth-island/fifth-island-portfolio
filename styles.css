@@ -1,0 +1,148 @@
+/* basic configurations */
+body {
+    margin: 0;
+    padding: 0;
+    background: black;
+    font-family: Space Mono;
+    font-weight: 400; /* Regular */
+    font-style: normal; /* Not italicized */
+}
+
+
+/*HEADER */
+header {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10; /* Higher z-index to overlap the banner */
+}
+
+.navbar {
+    text-align: center;
+    padding: 1em 0;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar li {
+    margin: 0 1em;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: hsla(82.5,100%,74.9%,1);
+    padding: .5em 1em;
+}
+
+/* Optional: Add a hover effect */
+.navbar a:hover {
+    color: #ccc; /* Change as needed */
+}
+
+
+
+/* main loop-video setup */
+.banner {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video {
+    z-index: -1; /* make sure the gradient goes above video */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* responsivity for video banner */
+@media (min-aspect-ratio: 16/9) {
+    .video {
+        width: 100%;
+        height: auto;
+    }
+}
+@media (max-aspect-ratio: 16/9) {
+    .video {
+        width: auto;
+        height: 100%;
+    }
+}
+
+/* content to be above video  */
+.circular-image {
+    width: 150px; /* Adjust this value to fit your design */
+    height: 150px; /* Making height and width the same for a perfect circle */
+    border-radius: 50%; /* This creates the circle effect */
+    object-fit: cover; /* Ensures the image covers the area without stretching. Adjust as needed */
+    display: block;
+    vertical-align: middle;
+}
+
+.banner-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white; /* Adjust color as needed */
+}
+.banner-content h1 {
+    color: hsla(82.5,100%,74.9%,1);
+    font-size: 2rem;
+}
+.banner-content h2 {
+    text-align: center;
+}
+
+/* typewriter effect */
+.container {
+    display: inline-block;
+}
+
+.typewriter-effect {
+    letter-spacing: 10px;
+    font-family: Space Mono;
+    font-weight: bold;
+    border-right: 5px solid;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation:
+        typing 2s steps(24),
+        cursor .4s step-end infinite alternate;
+}
+
+/* cursor blinking */
+@keyframes cursor {
+    50% { border-color: transparent }
+}
+/* typing effect */
+@keyframes typing {
+    from { width: 0 }
+}
+
+h2 {
+    font-family: Space Mono;
+    font-style: normal;
+    font-weight: 400;
+}
+
+p {
+    font-family: Space Mono;
+}
