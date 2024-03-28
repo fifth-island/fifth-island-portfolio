@@ -36,6 +36,13 @@ header {
     margin: 0 1em;
 }
 
+@media (max-aspect-ratio: 16/9) {
+    .navbar li {
+        margin: 0;
+    }
+
+}
+
 .navbar a {
     text-decoration: none;
     color: hsla(82.5,100%,74.9%,1);
