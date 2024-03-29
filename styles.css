@@ -50,14 +50,18 @@ header {
 }
 
 /* Optional: Add a hover effect */
-.navbar a:hover {
-    color: #ccc; /* Change as needed */
+a:hover {
+    color: white; /* Change as needed */
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 
 
 /* main loop-video setup */
-.banner {
+#banner {
     width: 100%;
     height: 100vh;
     overflow: hidden;
@@ -66,6 +70,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    border-bottom: chartreuse;
 }
 
 .video {
@@ -152,4 +157,116 @@ h2 {
 
 p {
     font-family: Space Mono;
+}
+
+a {
+    cursor: pointer;
+}
+
+/* README PAGE*/
+#readme {
+    border-top: solid hsla(82.5,100%,74.9%,1);
+    border-bottom: solid hsla(82.5,100%,74.9%,1);
+
+    min-height: 100vh;
+}
+
+
+
+.title {
+    color: hsla(82.5,100%,74.9%,1);
+    font-size: 3em;
+
+    letter-spacing: 1px;
+    font-family: Space Mono;
+    border-right: 5px solid;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation:
+        typing 2s steps(7),
+        cursor .4s step-end infinite alternate;
+}
+
+
+#readme p {
+    color: hsla(82.5,100%,74.9%,1);
+}
+
+.readme-content {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    width: 40%;
+    justify-content: center;
+    align-items: center;
+    border-bottom: chartreuse;
+    margin: auto;
+}
+
+
+#readme a {
+    text-decoration: underline;
+    color: white;
+}
+
+.button-container {
+    display: flex;
+    justify-content: start;
+}
+.button {
+    background-color: transparent;
+    border: 1px solid hsla(82.5, 100%, 74.9%, 1);
+    border-radius: 15px; /* Adjust for more or less rounded corners */
+    color: hsla(82.5, 100%, 74.9%, 1); /* Button text color */
+    text-decoration: none;
+    padding: 10px 20px; /* Adjust padding as needed */
+    font-size: 18px; /* Adjust font size as needed */
+    font-family: Space Mono;
+    margin-right: 10px; /* Space between buttons */
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.button:hover {
+    background-color: hsla(82.5, 100%, 74.9%, 0.1); /* Slight color fill on hover */
+    color: white;
+}
+
+@media (max-aspect-ratio: 16/9) {
+    .readme-content {
+        width: 70%;
+        padding-top: 30%;
+        padding-bottom: 30%;
+    }
+
+    .readme-content p {
+        font-size: 20px;
+    }
+
+    .button {
+        font-size: 29px;
+    }
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: transparent;
+}
+th, td {
+    text-align: center;
+    padding: 8px;
+    border: transparent;
+}
+.logo {
+    width: 100px; /* Adjust based on actual logo size */
+    height: auto;
+}
+.subtitle {
+    margin-top: 8px;
+    font-size: 14px;
+    color: hsla(82.5,100%,74.9%,1);
+}
+
+.divider {
+    border-top: 1px solid hsla(82.5,100%,74.9%,1);
 }
