@@ -123,7 +123,7 @@ html {
 }
 
 /* typewriter effect */
-.container {
+.container-typewriter {
     display: inline-block;
 }
 
@@ -168,7 +168,7 @@ a {
     border-top: solid hsla(82.5,100%,74.9%,1);
     border-bottom: solid hsla(82.5,100%,74.9%,1);
 
-    min-height: 100vh;
+    /* max-height: 100vh; */
 }
 
 
@@ -197,6 +197,7 @@ a {
     padding-top: 5%;
     padding-bottom: 5%;
     width: 40%;
+    height: auto;
     justify-content: center;
     align-items: center;
     border-bottom: chartreuse;
@@ -234,8 +235,8 @@ a {
 @media (max-aspect-ratio: 16/9) {
     .readme-content {
         width: 70%;
-        padding-top: 30%;
-        padding-bottom: 30%;
+        /* padding-top: 30%;
+        padding-bottom: 30%; */
     }
 
     .readme-content p {
@@ -269,4 +270,96 @@ th, td {
 
 .divider {
     border-top: 1px solid hsla(82.5,100%,74.9%,1);
+}
+
+
+/* SKILLS SECTION */
+#skills {
+  border-top: solid hsla(82.5,100%,74.9%,1);
+  border-bottom: solid hsla(82.5,100%,74.9%,1);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skills-content {
+  padding: 5% 0;
+  width: 70%;
+  margin: auto;
+  /* text-align: center; */
+  color: white; /* Adjust as needed to match your site's color scheme */
+}
+
+.skills-content .title {
+  color: hsla(82.5,100%,74.9%,1);
+  font-size: 3em;
+  letter-spacing: 1px;
+  font-family: Space Mono;
+  border-right: 5px solid;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  animation:
+      typing 2s steps(7),
+      cursor .4s step-end infinite alternate;
+  margin-bottom: 2rem;
+}
+
+.skills-content .container {
+  background: rgba(0, 100, 0, 0.3); /* Dark green with 30% transparency */
+  color: hsla(82.5,100%,74.9%,1);
+  border-radius: 1rem;
+  padding: 2rem;
+  width: 100%;
+  margin: auto;
+}
+
+.skills-content .row {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1.8rem;
+}
+
+.skills-content .bar {
+  padding: 10px;
+  border-radius: 1rem;
+  background: black;
+  transition: 0.3s ease;
+  cursor: pointer;
+  color: hsla(82.5,100%,74.9%,1);
+}
+
+.skills-content .bar:hover {
+  box-shadow: 0 4px 10px hsla(82.5,100%,74.9%,1);
+  transform: scale(1.03);
+}
+
+.skills-content .bar .info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.skills-content .bar .info img {
+  width: 50px; /* Adjust size as needed */
+  height: auto;
+}
+
+.skills-content .bar .info span {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 768px) {
+  .skills-content .container {
+      padding: 1rem;
+  }
+
+  .skills-content .row {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+  }
 }
