@@ -1,16 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <title>Joao Victor Quintanilha</title>
 
+    <!-- Link to Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
     <!-- Link to external CSS file -->
     <link rel="stylesheet" href="styles.css">
+
+    <!-- Include Internal CSS -->
+    <style>
+        /* Add your internal CSS here or ensure it’s correctly linked via styles.css */
+    </style>
 </head>
+
 <body>
 
     <header>
@@ -169,8 +176,60 @@
           </div>
       </div>
   </section>
+
+  <section class="services" id="services">
+    <div class="container-typewriter">
+      <h1 class="title">.PROJECTS</h1>
+    </div>
+    <div class="services-container">
+        <div class="service-box">
+            <img src="images/projects/thfes.png" alt="Service Image" class="service-image">
+            <div class="service-info">
+                <h4>THFES Website</h4>
+                <p>Developed a web portal for the Tufts Human Factors & Ergonomics Society, initially as volunteer work that transitioned into a part-time web development role. The website was built using WordPress as the ECM and enhanced with custom HTML, CSS, and JavaScript.</p>
+            </div>
+        </div>
+        <div class="service-box">
+            <img src="images/projects/karachi.png" alt="Service Image" class="service-image">
+            <div class="service-info">
+                <h4>Karachi Water Project</h4>
+                <p>Karachi Project
+                  Contributed to the development of a water consumption monitoring system for factories in Karachi. Built a pipeline to collect, process, and evaluate water consumption data, creating dashboards to visualize the findings. Additionally, developed a text classification algorithm that categorized 67% of data from over 9,000 industries, improving clustering speed and accuracy. The pipeline and algorithm were implemented in Python using Pandas and NumPy.</p>
+            </div>
+        </div>
+        <div class="service-box">
+            <img src="images/projects/token.png" alt="Service Image" class="service-image">
+            <div class="service-info">
+                <h4>Blockchain Platform</h4>
+                <p>LBlockchain Securitization Platform
+                  Led a team of four in creating a minimum viable product for a securitization platform on the Ethereum blockchain. The project was developed using TypeScript, React, and MongoDB. Personally managed the creation and integration of test tokens within the platform, simulating secure and efficient sales as the core product of the system.</p>
+            </div>
+        </div>
+        <div class="service-box">
+            <img src="images/projects/argonne.png" alt="Service Image" class="service-image">
+            <div class="service-info">
+                <h4>Argonne Lab Course</h4>
+                <p>Selected for the U.S. Department of Energy’s specialized training program focused on leveraging AI in supercomputing environments. Gained expertise in building advanced neural networks, exploring LLM embeddings and tokenization, parallel training methodologies, and working with AI accelerators.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
   
-   
+<script>
+  // Smooth scroll to sections
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+              behavior: 'smooth'
+          });
+      });
+  });
+</script>
+
 
 
 </body>
