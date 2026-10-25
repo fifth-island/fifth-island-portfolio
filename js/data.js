@@ -171,14 +171,14 @@ export const PROJECTS = [
     links: [],
   },
   {
-    id: "form", title: "FORM", cat: ["side"], year: "2026", cover: "calendar",
-    context: "Training journal · vanilla JS",
-    tags: ["JavaScript", "SVG", "Analytics"],
-    blurb: "The training journal I actually log in, with weekly load scores drawn in hand-built SVG.",
-    body: "A no-backend web app for logging sessions, with an insights layer that estimates training demand from session RPE, scores each week, and plans the next week's accessory work around priority muscles.",
-    metrics: [["0", "servers"], ["SVG", "charts"], ["weekly", "plans"]],
+    id: "form", title: "FORM", cat: ["data", "side"], year: "2026", cover: "calendar", award: "in progress",
+    context: "Training journal + analytics · vanilla JS",
+    tags: ["JavaScript", "SVG charts", "Session-RPE", "Rule-based scoring", "38 unit tests"],
+    blurb: "My own training, treated as a dataset: every session logged, labeled, scored and ranked, with the next week planned from the gaps.",
+    body: "A no-backend web app I log every CrossFit session in. Each movement is labeled with the muscles and movement pattern it trains; sessions get an exposure and demand score and are ranked against my recent baseline; each week is graded out of 100 and the next week's accessory work is generated from what was missing. The rules keep the data honest: unknown loads stay empty and unconfirmed entries never count. The goal is to collect enough clean weeks to move from rules to statistics and machine learning.",
+    metrics: [["22", "sessions so far"], ["76", "movements labeled"], ["/100", "weekly score"]],
     images: [],
-    links: [],
+    links: [["See the method", "#lab"]],
   },
   {
     id: "plastisseiro", title: "Plastisseiro", cat: ["design"], year: "2016", cover: "weave", award: "4th of 300 · WorldSkills Brazil",
@@ -205,7 +205,8 @@ export const PROJECTS = [
 // Career as a git log. lane 0 = main (engineering), 1 = research, 2 = design, 3 = community
 export const COMMITS = [
   { y: "2026", lane: 0, type: "feat", msg: "Software Engineer, AI Integration @ Dimenso", sub: "AR glasses, voice agents and lab AI · Cambridge, MA", head: true },
-  { y: "2026", lane: 1, type: "paper", msg: "DCCE accepted at DCASE 2026", sub: "Sperm whale coda encoding · co-first author", merge: 0 },
+  { y: "2026", lane: 1, type: "experiment", msg: "Started FORM: my training as a dataset", sub: "Logging, labeling and scoring every session · ongoing", merge: 0 },
+  { y: "2026", lane: 1, type: "paper", msg: "DCCE accepted at DCASE 2026", sub: "Sperm whale coda encoding · co-first author" },
   { y: "2026", lane: 0, type: "release", msg: "M.S. Data Analytics, Tufts", sub: "GPA 3.96 · Outstanding Graduate Scholarship Award · Honos Civicus" },
   { y: "2025", lane: 0, type: "feat", msg: "Software Engineer Intern @ Tesla", sub: "Infrastructure · Austin, TX" },
   { y: "2025", lane: 0, type: "feat", msg: "Software Engineer Intern @ DLR", sub: "German Aerospace Center · Braunschweig" },
@@ -252,3 +253,19 @@ export const HONORS = [
   "ACM Fellow",
   "1st place · Hi!ckathon Paris",
 ];
+
+// FORM training lab: a snapshot computed with FORM's own analytics (src/analytics.js) from the real log.
+// sessions: [date, demand points, median of the 10 sessions before (null until 3 exist), rank of 22]
+export const LAB = {
+  asOf: "Oct 24, 2026",
+  sessions: [["09-21",167,null,20],["09-24",211,null,13],["09-25",123,null,22],["09-28",212,167,12],["09-29",248,189,7],["09-30",188,211,16],["10-01",151,200,21],["10-02",231,188,9],["10-05",184,200,17],["10-06",215,188,11],["10-07",169,200,19],["10-08",304,200,3],["10-09",246,200,8],["10-13",258,214,5],["10-14",181,223,18],["10-15",208,202,14],["10-17",323,212,2],["10-19",271,223,4],["10-20",257,231,6],["10-21",229,252,10],["10-23",189,252,15],["10-24",505,252,1]],
+  notes: { "10-24": "HYROX, 44:54" },
+  weeks: [
+    { wk: "Sep 21", parts: [15, 15.5, 11.25, 5, 10] },
+    { wk: "Sep 28", parts: [20, 21.25, 13.75, 5, 10] },
+    { wk: "Oct 5", parts: [20, 28.5, 15, 10, 8] },
+    { wk: "Oct 12", parts: [20, 23, 11.25, 5, 15] },
+    { wk: "Oct 19", parts: [20, 33.375, 15, 10, 3] },
+  ],
+  parts: [["attendance", 20], ["priority muscles", 40], ["balance", 15], ["load progression", 10], ["load management", 15]],
+};

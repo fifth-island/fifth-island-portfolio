@@ -24,6 +24,7 @@
       <a href="#readme">.readme</a>
       <a href="#work">.work</a>
       <a href="#research">.research</a>
+      <a href="#lab">.lab</a>
       <a href="#projects">.projects</a>
       <a href="#log">.log</a>
       <a href="#contact">.contact</a>
@@ -183,10 +184,73 @@
     </div>
   </section>
 
+  <!-- LAB -->
+  <section class="section lab" id="lab">
+    <div class="wrap">
+      <header class="sec-head"><span class="mono idx">04</span><h2>.lab</h2><span class="rule"></span><span class="mono live"><i></i>in progress</span></header>
+      <div class="lab-intro reveal">
+        <div>
+          <p class="mono kicker">FORM · my training journal · since Sep 2026</p>
+          <h3>I treat my own training as a dataset.</h3>
+        </div>
+        <div class="lab-lede">
+          <p>Every CrossFit session I do goes into <b>FORM</b>, a training journal I built and use daily. It doesn't just store workouts: it labels them, measures them, ranks each one against my recent baseline, grades every week out of 100, and writes next week's plan from whatever the data says was missing.</p>
+          <p>It's the same way I approach engineering problems: decide what counts, measure it honestly, and let the evidence pick the next move.</p>
+        </div>
+      </div>
+
+      <ol class="method reveal">
+        <li><span class="mono n">01</span><b>Capture</b><p>Paste the gym's whiteboard; a deterministic parser drafts the session. Nothing counts until I confirm it.</p></li>
+        <li><span class="mono n">02</span><b>Label</b><p>Each of 76 movements maps to the muscles it trains (direct, primary, secondary) and one of 10 movement patterns.</p></li>
+        <li><span class="mono n">03</span><b>Measure</b><p>Exposure points per muscle (2 / 1 / 0.5, capped per session) and session demand from RPE × minutes, or a labeled estimate.</p></li>
+        <li><span class="mono n">04</span><b>Rank</b><p>Every session against the median of the ten before it; every lift against my heaviest earlier entry.</p></li>
+        <li><span class="mono n">05</span><b>Review</b><p>A weekly score out of 100, with what went well, what to improve and which muscles or patterns were missing.</p></li>
+        <li><span class="mono n">06</span><b>Plan</b><p>Next week's accessory blocks are generated from the deficits, then checked for follow-through.</p></li>
+        <li class="next"><span class="mono n">07</span><b>Model</b><p>Next: once enough clean weeks exist, move from rules to statistics and machine learning.</p></li>
+      </ol>
+
+      <div class="lab-charts">
+        <figure class="chart-card reveal">
+          <figcaption><span class="mono kicker">session demand · all 22 sessions</span><span class="mono tiny" id="labAsOf"></span></figcaption>
+          <svg id="demandChart" role="img" aria-label="Bar chart of session demand for 22 sessions, each compared with the median of the ten sessions before it"></svg>
+          <p class="mono legend"><span><i class="sw bar"></i>session demand</span><span><i class="sw line"></i>median of the 10 before</span><span><i class="sw hot"></i>harder than usual</span></p>
+        </figure>
+        <figure class="chart-card reveal">
+          <figcaption><span class="mono kicker">weekly score · out of 100</span></figcaption>
+          <svg id="weekChart" role="img" aria-label="Stacked bar chart of weekly scores: 57, 70, 82, 74 and 81"></svg>
+          <p class="mono legend" id="weekLegend"></p>
+        </figure>
+      </div>
+
+      <div class="lab-foot">
+        <div class="rules reveal">
+          <p class="mono kicker">rules the data has to follow</p>
+          <ul class="mono">
+            <li>unknown loads stay <code>null</code>, never guessed</li>
+            <li>unconfirmed or skipped entries never count</li>
+            <li>a baseline needs at least 3 earlier sessions</li>
+            <li>plans made after the fact are labeled hindsight</li>
+            <li>exposure points are not called hypertrophy sets</li>
+          </ul>
+        </div>
+        <div class="next-steps reveal">
+          <p class="mono kicker">where it's going</p>
+          <p>The rules are deliberately simple so the data stays trustworthy while it grows. With a few months of sessions, the plan is to test what actually drives a strong week, fit progression curves for each lift, estimate fatigue and readiness from session RPE, relate training exposure to body-composition scans, and eventually let a model suggest the next session.</p>
+          <dl class="mini">
+            <div><dd>22</dd><dt>sessions logged so far</dt></div>
+            <div><dd>38</dd><dt>unit tests on the scoring rules</dt></div>
+            <div><dd>0</dd><dt>dependencies: hand-built SVG charts</dt></div>
+            <div><dd>daily</dd><dt>it's the app I actually log in</dt></div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- PROJECTS -->
   <section class="section projects" id="projects">
     <div class="wrap">
-      <header class="sec-head"><span class="mono idx">04</span><h2>.projects</h2><span class="rule"></span></header>
+      <header class="sec-head"><span class="mono idx">05</span><h2>.projects</h2><span class="rule"></span></header>
       <div class="filters mono" role="group" aria-label="Filter projects" id="filters"></div>
       <div class="grid" id="grid"></div>
       <aside class="gh reveal" id="gh" hidden>
@@ -199,7 +263,7 @@
   <!-- LOG -->
   <section class="section log" id="log">
     <div class="wrap">
-      <header class="sec-head"><span class="mono idx">05</span><h2>.log</h2><span class="rule"></span></header>
+      <header class="sec-head"><span class="mono idx">06</span><h2>.log</h2><span class="rule"></span></header>
       <p class="mono cmd">$ git log --graph --all <span class="dim">--author="João"</span></p>
       <div class="lanes mono" id="lanes"></div>
       <div class="gitlog" id="gitlog"></div>
@@ -209,7 +273,7 @@
   <!-- STACK -->
   <section class="section stack" id="stack">
     <div class="wrap">
-      <header class="sec-head"><span class="mono idx">06</span><h2>.stack</h2><span class="rule"></span></header>
+      <header class="sec-head"><span class="mono idx">07</span><h2>.stack</h2><span class="rule"></span></header>
       <div class="stack-grid" id="stackGrid"></div>
     </div>
   </section>
@@ -217,7 +281,7 @@
   <!-- CONTACT -->
   <section class="contact" id="contact">
     <div class="wrap">
-      <p class="mono kicker">07 → you</p>
+      <p class="mono kicker">08 → you</p>
       <h2 class="contact-head" id="ctaHeading">Let's build together?</h2>
       <div class="contact-row">
         <button class="btn solid big" id="copyEmail" data-email="joaoquintanilha2018@gmail.com">✉ <span>joaoquintanilha2018@gmail.com</span></button>

@@ -1,8 +1,9 @@
-import { PROFILE, PROJECTS, CATEGORIES, COMMITS, LANES, STACK, HONORS } from "./data.js";
+import { PROFILE, PROJECTS, CATEGORIES, COMMITS, LANES, STACK, HONORS, LAB } from "./data.js";
 import { startSignal } from "./signal.js";
 import { drawCover } from "./covers.js";
 import { initCoda } from "./coda.js";
 import { renderGitLog } from "./gitlog.js";
+import { renderLab } from "./lab.js";
 
 document.documentElement.classList.add("js");
 const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -20,7 +21,7 @@ const links = [...document.querySelectorAll(".nav nav a")];
 const sectionIO = new IntersectionObserver((es) => es.forEach((e) => {
   if (e.isIntersecting) links.forEach((a) => a.classList.toggle("active", a.getAttribute("href") === "#" + e.target.id));
 }), { rootMargin: "-45% 0px -50% 0px" });
-["readme", "work", "research", "projects", "log", "contact"].forEach((id) => sectionIO.observe(document.getElementById(id)));
+["readme", "work", "research", "lab", "projects", "log", "contact"].forEach((id) => sectionIO.observe(document.getElementById(id)));
 
 /* ---------------- reveal on scroll ---------------- */
 const revealIO = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("in"); revealIO.unobserve(e.target); } }), { threshold: 0.12 });
@@ -83,6 +84,9 @@ document.querySelectorAll("[data-count]").forEach((el) => countIO.observe(el));
 /* ---------------- research ---------------- */
 const coda = initCoda($("#coda"), { reduced });
 
+/* ---------------- lab (FORM) ---------------- */
+renderLab(LAB);
+
 /* ---------------- projects ---------------- */
 const grid = $("#grid"), filtersEl = $("#filters");
 let filter = "all";
@@ -132,7 +136,7 @@ function openProject(id) {
   $("#mBody").textContent = p.body;
   $("#mMetrics").innerHTML = p.metrics.map(([v, k]) => `<div><dd>${esc(v)}</dd><dt>${esc(k)}</dt></div>`).join("");
   $("#mTags").innerHTML = p.tags.map((t) => `<span>${esc(t)}</span>`).join("");
-  $("#mLinks").innerHTML = p.links.map(([l, u], i) => `<a class="btn small${i ? "" : " solid"}" href="${esc(u)}" target="_blank" rel="noopener">${esc(l)} ↗</a>`).join("") || `<span class="mono tiny">No public link: ask me about it.</span>`;
+  $("#mLinks").innerHTML = p.links.map(([l, u], i) => u.startsWith("#") ? `<a class="btn small${i ? "" : " solid"} inpage" href="${esc(u)}">${esc(l)} ↓</a>` : `<a class="btn small${i ? "" : " solid"}" href="${esc(u)}" target="_blank" rel="noopener">${esc(l)} ↗</a>`).join("") || `<span class="mono tiny">No public link: ask me about it.</span>`;
   const media = $("#mMedia");
   media.innerHTML = p.images.length ? p.images.map((src) => `<img src="${esc(src)}" alt="${esc(p.title)} screenshot" loading="lazy">`).join("") : `<canvas data-cover="${p.cover}"></canvas>`;
   modal.hidden = false; document.body.style.overflow = "hidden";
@@ -142,6 +146,7 @@ function openProject(id) {
 function closeModal() { modal.hidden = true; document.body.style.overflow = ""; lastFocus?.focus(); }
 grid.addEventListener("click", (e) => { const c = e.target.closest(".card"); if (c) openProject(c.dataset.id); });
 $("#mClose").addEventListener("click", closeModal);
+$("#mLinks").addEventListener("click", (e) => { if (e.target.closest(".inpage")) closeModal(); });
 modal.addEventListener("click", (e) => { if (e.target === modal) closeModal(); });
 
 /* live GitHub feed (public API, silently skipped if unavailable) */
@@ -195,6 +200,7 @@ const COMMANDS = [
   { t: "readme", d: "about me", run: go("readme") },
   { t: "work", d: "Dimenso · Tesla · DLR", run: go("work") },
   { t: "research", d: "sperm whale codas", run: go("research") },
+  { t: "lab", d: "FORM · my training as a dataset", run: go("lab") },
   { t: "projects", d: `${PROJECTS.length} builds`, run: go("projects") },
   { t: "log", d: "career as git log", run: go("log") },
   { t: "stack", d: "tools I use", run: go("stack") },

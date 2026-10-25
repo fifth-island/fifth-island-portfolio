@@ -12,6 +12,7 @@ Personal site of **João Victor Quintanilha**: software engineer building AI sys
 | `.readme` | Story, numbers and honors. |
 | `.work` | Dimenso, with an animated capture → event log → attribution → records pipeline, plus Tesla and DLR. |
 | `.research` | DCCE (DCASE 2026). A coda player: pick a coda type, see its rhythm and spectral channels and where the fused embedding lands, and hear synthesised clicks. |
+| `.lab` | FORM, my training journal, as an ongoing data project: the capture → label → measure → rank → review → plan method, real session-demand and weekly-score charts, and the plan to move from rules to statistics and ML. |
 | `.projects` | Filterable grid. Every cover is drawn in code to echo the project's data; a live list of recently pushed repos comes from the GitHub API. |
 | `.log` | Career rendered as `git log --graph` across engineering, research, design and community branches. |
 | `.stack` / contact | Tools, and a one-click email copy. |
@@ -31,6 +32,7 @@ js/signal.js    hero canvas
 js/covers.js    generative project covers
 js/coda.js      research coda player (WebAudio)
 js/gitlog.js    career git graph
+js/lab.js       FORM charts (session demand, weekly score)
 ```
 
 To add a project or a role, edit `js/data.js` only.
