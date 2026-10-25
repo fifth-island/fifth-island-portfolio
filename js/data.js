@@ -178,7 +178,7 @@ export const PROJECTS = [
     body: "A no-backend web app I log every CrossFit session in. Each movement is labeled with the muscles and movement pattern it trains; sessions get an exposure and demand score and are ranked against my recent baseline; each week is graded out of 100 and the next week's accessory work is generated from what was missing. The rules keep the data honest: unknown loads stay empty and unconfirmed entries never count. The goal is to collect enough clean weeks to move from rules to statistics and machine learning.",
     metrics: [["22", "sessions so far"], ["76", "movements labeled"], ["/100", "weekly score"]],
     images: [],
-    links: [["See the method", "#lab"]],
+    links: [["Live app", "https://form-training-journal.vercel.app/#insights"], ["See the method", "#lab"]],
   },
   {
     id: "plastisseiro", title: "Plastisseiro", cat: ["design"], year: "2016", cover: "weave", award: "4th of 300 · WorldSkills Brazil",

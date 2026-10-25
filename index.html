@@ -196,6 +196,11 @@
         <div class="lab-lede">
           <p>Every CrossFit session I do goes into <b>FORM</b>, a training journal I built and use daily. It doesn't just store workouts: it labels them, measures them, ranks each one against my recent baseline, grades every week out of 100, and writes next week's plan from whatever the data says was missing.</p>
           <p>It's the same way I approach engineering problems: decide what counts, measure it honestly, and let the evidence pick the next move.</p>
+          <div class="row">
+            <a class="btn solid" href="https://form-training-journal.vercel.app/#insights" target="_blank" rel="noopener">Open the live dashboard ↗</a>
+            <a class="btn" href="https://form-training-journal.vercel.app/#insights/weekly" target="_blank" rel="noopener">Weekly reviews ↗</a>
+            <a class="btn ghost" href="https://form-training-journal.vercel.app/#insights/rankings" target="_blank" rel="noopener">Session rankings ↗</a>
+          </div>
         </div>
       </div>
 
@@ -211,7 +216,7 @@
 
       <div class="lab-charts">
         <figure class="chart-card reveal">
-          <figcaption><span class="mono kicker">session demand · all 22 sessions</span><span class="mono tiny" id="labAsOf"></span></figcaption>
+          <figcaption><span class="mono kicker">session demand · all 22 sessions</span><span class="mono tiny"><span id="labAsOf"></span> · <a href="https://form-training-journal.vercel.app/#insights" target="_blank" rel="noopener">live data ↗</a></span></figcaption>
           <svg id="demandChart" role="img" aria-label="Bar chart of session demand for 22 sessions, each compared with the median of the ten sessions before it"></svg>
           <p class="mono legend"><span><i class="sw bar"></i>session demand</span><span><i class="sw line"></i>median of the 10 before</span><span><i class="sw hot"></i>harder than usual</span></p>
         </figure>
