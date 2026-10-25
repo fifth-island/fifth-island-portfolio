@@ -1,815 +1,264 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>Joao Victor Quintanilha</title>
-
-    <!-- Link to Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-
-    <!-- Link to external CSS file -->
-    <link rel="stylesheet" href="styles.css">
-
-    <!-- Include Internal CSS -->
-    <style>
-        /* Add your internal CSS here or ensure it’s correctly linked via styles.css */
-    </style>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>João Victor Quintanilha</title>
+  <meta name="description" content="João Victor Quintanilha: software engineer building AI systems that turn raw signals (AR glasses, sensors, whale clicks) into software people use.">
+  <meta property="og:title" content="João Victor Quintanilha">
+  <meta property="og:description" content="Software engineer · AI systems · physical AI & ML research">
+  <meta property="og:image" content="images/me.jpeg">
+  <meta name="theme-color" content="#070908">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23070908'/%3E%3Cpath d='M4 18h5l2-8 3 14 3-18 3 12 2-4h6' fill='none' stroke='%23cfff7f' stroke-width='2.4' stroke-linejoin='round' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Instrument+Sans:wght@400;500;600&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
+  <a class="skip" href="#readme">Skip to content</a>
 
-    <header>
-        <nav class="navbar">
-            <ul>
-                <li><a href="index.html">.HOME</a></li>
-                <li><a href="#readme">.README</a></li>
-                <li><a href="#skills">.SKILLS</a></li>
-                <li><a href="#services">.PROJECTS</a></li>
-                <li><a href="#career">.CAREER</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header class="nav" id="nav">
+    <a class="prompt" href="#top" aria-label="Back to top"><span class="tilde">~/</span>joao<span class="caret" aria-hidden="true"></span></a>
+    <nav aria-label="Sections">
+      <a href="#readme">.readme</a>
+      <a href="#work">.work</a>
+      <a href="#research">.research</a>
+      <a href="#projects">.projects</a>
+      <a href="#log">.log</a>
+      <a href="#contact">.contact</a>
+    </nav>
+    <button class="kbd-btn" id="openPalette" aria-label="Open command palette"><kbd>⌘</kbd><kbd>K</kbd></button>
+  </header>
 
-    <section id="banner">
-        <video autoplay muted loop playsinline class="video">
-            <source src="images/banner_tech.mp4" type="video/mp4">
-        </video>
-
-        <div class="banner-content">
-            <img src="images/me.jpeg" alt="Description of image" class="circular-image">
-            <div class="container">
-                <h1 class="typewriter-effect">Hi! I'm João Quintanilha</h1>
-            </div>
-            <h2>An engineer who loves to work with data, AIs, websites and applications.</h2>
-        </div>
-    </section>
-
-    <section id="readme">
-        <div class="readme-content">
-            <div class="container-typewriter">
-                <h1 class="title">.README</h1>
-            </div>
-
-            <p>
-                I started as a graphic designer, became a software engineer, and found my edge in data.
-                That path gave me something most engineers don't have: the ability to think about
-                systems from the user's eye all the way to the database. I hold a B.S. in Computer
-                Science & Biology and an M.S. in Data/Software Analytics from
-                <a href="https://www.tufts.edu">Tufts University</a>, and I've built interfaces,
-                applications, dashboards, and AI-powered tools across Brazil, Germany and the United States. <br><br>
-
-                What drives me is turning complex problems into products — clean, functional,
-                and built for the real world. My well-rounded background as a graphic designer,
-                software engineer, and data analyst makes me an engineer who doesn't just write
-                code, but creates solutions that people actually use.
-            </p>
-
-            <hr class="divider">
-
-            <table>
-                <tr>
-                    <th>
-                        <img src="images/palantir.png" alt="Palantir Logo" class="logo">
-                    </th>
-                    <th>
-                        <img src="images/pega.webp" alt="Pega Logo" class="logo">
-                    </th>
-                    <th>
-                        <img src="images/brasa.png" alt="BRASA Logo" class="logo">
-                    </th>
-                    <th>
-                        <img src="images/tufts.png" alt="Tisch Logo" class="logo">
-                    </th>
-                </tr>
-                <tr>
-                    <td class="subtitle">Palantir Scholar</td>
-                    <td class="subtitle">Pega Scholar</td>
-                    <td class="subtitle">BRASA Scholar</td>
-                    <td class="subtitle">Tisch Scholar</td>
-                </tr>
-                <tr>
-                    <th></th>
-                    <th>
-                        <img src="images/shpe.png" alt="SHPE Logo" class="logo">
-                    </th>
-                    <th>
-                        <img src="images/garcia.png" alt="GFF Logo" class="logo">
-                    </th>
-                    <th></th>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td class="subtitle">SHPE Scholar</td>
-                    <td class="subtitle">GFF Scholar</td>
-                    <td></td>
-                </tr>
-            </table>
-            <br>
-
-            <div class="button-container">
-<!--                 <button class="button">Hire me</button>
-               -->
-                
-              <a href="joao_resume.pdf" download="joao_resume.pdf"><button class="button">Download Resume</button></a>
-
-            </div>
-        </div>
-    </section>
-
-    <section id="skills">
-      <div class="skills-content">
-          <div class="container">
-            <div class="container-typewriter">
-              <h1 class="title">.SKILLS</h1>
-            </div>
-              <div class="row" id="skillsContainer">
-                  <div class="bar">
-                      <div class="info">
-                          <img src="images/skills/skill1.png" alt="Figma Logo"/>
-                          <span>Figma</span>
-                      </div>
-                  </div>                  
-                  <div class="bar animate__animated animate__zoomIn animate__delay-2s">
-                    <div class="info">
-                        <img src="images/skills/skill7.png" alt="Heroku Logo"/>
-                        <span>Heroku</span>
-                    </div>
-                  </div>
-
-                    <div class="bar animate__animated animate__zoomIn animate__delay-2s">
-                      <div class="info">
-                          <img src="images/skills/skill5.png" alt="Jupyter Notebook Logo"/>
-                          <span>Jupyter</span>
-                      </div>
-                    </div>                  
-                    <div class="bar animate__animated animate__zoomIn animate__delay-2s">
-                      <div class="info">
-                          <img src="images/skills/skill6.png" alt="MySQL Logo"/>
-                          <span>MySQL</span>
-                      </div>
-                    </div>
-                    <div class="bar animate__animated animate__zoomIn animate__delay-2s">
-                      <div class="info">
-                          <img src="images/skills/skill10.png" alt="Node Logo"/>
-                          <span>Node.js</span>
-                      </div>
-                    </div>
-                  
-                  <div class="bar animate__animated animate__zoomIn animate__delay-2s">
-                      <div class="info">
-                          <img src="images/skills/skill3.png" alt="Photoshop Logo"/>
-                          <span>Photoshop</span>
-                      </div>
-                  </div>
-                  
-                  <div class="bar animate__animated animate__zoomIn animate__delay-2s">
-                    <div class="info">
-                        <img src="images/skills/skill2.png" alt="Node Logo"/>
-                        <span>Power BI</span>
-                    </div>
-                  </div>
-
-                  <div class="bar animate__animated animate__zoomIn animate__delay-2s">
-                    <div class="info">
-                        <img src="images/skills/skill9.png" alt="Framer Logo"/>
-                        <span>React</span>
-                    </div>
-                </div>
-
-
-
-                  <div class="bar animate__animated animate__zoomIn animate__delay-2s">
-                    <div class="info">
-                        <img src="images/skills/skill8.png" alt="TensorFlow Logo"/>
-                        <span>TensorFlow</span>
-                    </div>
-                  </div>
-                  <div class="bar animate__animated animate__zoomIn animate__delay-2s">
-                    <div class="info">
-                        <img src="images/skills/skill4.png" alt="WordPress Logo"/>
-                        <span>WordPress</span>
-                    </div>
-                  </div>
-                  <!-- Add more skill bars as needed -->
-              </div>
-          </div>
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <canvas class="signal" id="signal" aria-hidden="true"></canvas>
+    <div class="hero-inner">
+      <p class="eyebrow mono"><span class="pulse" aria-hidden="true"></span>$ whoami</p>
+      <h1 class="hero-name">João Victor<br><span class="outline">Quintanilha</span></h1>
+      <p class="hero-line">I turn raw signals into software people use: <em>AR-glasses captures</em> into lab records, <em>whale clicks</em> into embeddings, <em>sensor streams</em> into dashboards.</p>
+      <ul class="status mono">
+        <li><b>now</b> Software Engineer, AI Integration @ Dimenso</li>
+        <li><b>paper</b> DCASE 2026 · sperm whale coda encoding</li>
+        <li><b>base</b> Boston, MA · from Goiânia, Brazil</li>
+      </ul>
+      <div class="hero-cta">
+        <a class="btn solid" href="joao_resume.pdf" download>Resume ↓</a>
+        <a class="btn" href="https://github.com/fifth-island" target="_blank" rel="noopener">GitHub ↗</a>
+        <a class="btn ghost" href="#work">See the work</a>
       </div>
+    </div>
+    <p class="hero-hint mono" aria-hidden="true">move the cursor to bring the signal into focus</p>
   </section>
 
-  <section class="services" id="services">
-    <div class="container-typewriter">
-      <h1 class="title">.PROJECTS</h1>
+  <!-- README -->
+  <section class="section readme" id="readme">
+    <div class="wrap">
+      <header class="sec-head"><span class="mono idx">01</span><h2>.readme</h2><span class="rule"></span></header>
+      <div class="readme-grid">
+        <figure class="portrait reveal">
+          <img src="images/me.jpeg" alt="João Victor Quintanilha smiling, wearing a Limites t-shirt" width="721" height="721" loading="lazy">
+          <figcaption class="mono">fig. 1 · the human behind the commits</figcaption>
+        </figure>
+        <div class="readme-copy reveal">
+          <p class="lede">I started as a graphic designer, became a software engineer, and found my edge in data and AI.</p>
+          <p>I grew up in Goiânia, Brazil, where a technical design program at SENAI taught me to care about how things look and feel. As a teenager I was turning plastic bags into upholstery foam and lecturing about it at U.S. universities. I came to Boston for <a href="https://www.tufts.edu" target="_blank" rel="noopener">Tufts</a>, studied Computer Science <i>and</i> Biology, then a Master's in Data Analytics, and built things in Brazil, Germany, France, Greece and the U.S. along the way.</p>
+          <p>Today I'm a software engineer at <b>Dimenso</b>, building the AI behind a lab copilot: smart glasses and a voice agent that follow scientists through their protocols, and the systems that turn what they capture into clean, trustworthy records. On the side, I co-wrote a paper on how sperm whales encode identity in their clicks, mentor robotics teams back home, and build the apps I use to train for CrossFit.</p>
+          <p class="mono small">design eye · engineering hands · data brain</p>
+          <dl class="stats">
+            <div><dt>GPA, M.S.</dt><dd data-count="3.96" data-dec="2">3.96</dd></div>
+            <div><dt>Outstanding grad award</dt><dd>top <span data-count="2">2</span>/1,200</dd></div>
+            <div><dt>countries built in</dt><dd data-count="5">5</dd></div>
+            <div><dt>hackathon finish</dt><dd>1<sup>st</sup></dd></div>
+          </dl>
+        </div>
+      </div>
+      <div class="marquee mono" aria-label="Honors and scholarships">
+        <div class="marquee-track" id="honors"></div>
+      </div>
     </div>
-    <div class="services-container">
-        <div class="service-box" data-link="https://industrial-plant-monitor.vercel.app/">
-            <img src="images/projects/industrial-plant-monitor.vercel.app_.png" alt="Plant Monitor Dashboard" class="service-image">
-            <div class="service-info">
-                <h4>Plant Monitor Dashboard</h4>
-                <div class="service-tags">
-                    <span class="tag">React</span>
-                    <span class="tag">TypeScript</span>
-                    <span class="tag">FastAPI</span>
-                    <span class="tag">PostgreSQL</span>
-                    <span class="tag">Recharts</span>
-                    <span class="tag">SSE</span>
-                </div>
-                <p>Personal Project · React + PostgreSQL · 2026<br><br>
-                  Real-time industrial monitoring dashboard that tracks equipment health across multiple facilities. Operators observe live sensor data — temperature, pressure, power, and production — for every asset in the plant via Server-Sent Events. Features automatic KPI aggregation, interactive time-series charting with configurable windows, and operational insights that flag anomalies by severity.</p>
-            </div>
+  </section>
+
+  <!-- WORK -->
+  <section class="section work" id="work">
+    <div class="wrap">
+      <header class="sec-head"><span class="mono idx">02</span><h2>.work</h2><span class="rule"></span></header>
+
+      <article class="feature reveal">
+        <div class="feature-top">
+          <div>
+            <p class="mono kicker">Feb 2026 – present · Cambridge, MA</p>
+            <h3>Dimenso <span class="dim">/ Software Engineer, AI Integration</span></h3>
+            <p class="feature-sub">An AI copilot for wet labs: AR smart glasses and a voice agent guide scientists step by step, while everything they capture becomes structured, attributable data.</p>
+          </div>
+          <a class="btn small" href="https://dimenso.ai" target="_blank" rel="noopener">dimenso.ai ↗</a>
         </div>
-        <div class="service-box" data-link="https://github.com/JohnsonM20/AquaSense" data-images="images/projects/aquasense2.png,images/projects/aquasense.gif" data-image-sizes="100,75">
-            <img src="images/projects/aquasense2.png" alt="AquaSense Hackathon Project" class="service-image">
-            <div class="service-info">
-                <h4>AquaSense</h4>
-                <div class="service-tags">
-                    <span class="tag">FastAPI</span>
-                    <span class="tag">Machine Learning</span>
-                    <span class="tag">Figma</span>
-                    <span class="tag">Product Management</span>
-                </div>
-                <p>Hi! Hackathon · Institut Polytechnique de Paris · Nov – Dec 2024<br><br>
-                  🏆 1st Place – Technical Excellence: Achieved 69% F1 score, outperforming next-best team by 5%. Led as Tech Leader on an AI-smart mobile app for French farmers to predict groundwater levels. Created a comprehensive business report to analyze market needs and assess product viability within the French commercial context.</p>
-            </div>
-        </div>
-        <div class="service-box" data-link="https://thfes.com/">
-            <img src="images/projects/thfes.png" alt="THFES Website" class="service-image">
-            <div class="service-info">
-                <h4>THFES Website</h4>
-                <div class="service-tags">
-                    <span class="tag">JavaScript</span>
-                    <span class="tag">HTML</span>
-                    <span class="tag">CSS</span>
-                    <span class="tag">Figma</span>
-                    <span class="tag">Agile</span>
-                </div>
-                <p>Tufts Human Factors & Ergonomics Society · Medford, MA · Jul 2023 – Jul 2024<br><br>
-                  Rebuilt the entire website (36 pages) using JavaScript and HTML/CSS, improving member engagement by 25%. Worked under an Agile development methodology, creating a Notion dashboard to integrate and manage all team tasks. Streamlined maintenance by implementing a content management system, allowing owners to update content independently.</p>
-            </div>
-        </div>
-        <div class="service-box" data-link="https://github.com/fifth-island/HACKA_BRASA_2024">
-            <img src="images/projects/token.png" alt="Blockchain Platform" class="service-image">
-            <div class="service-info">
-                <h4>Blockchain Platform</h4>
-                <div class="service-tags">
-                    <span class="tag">TypeScript</span>
-                    <span class="tag">MongoDB</span>
-                    <span class="tag">Prisma ORM</span>
-                </div>
-                <p>BRASA Hacks · Columbia University, NY · Aug 2024<br><br>
-                  Designed and developed a securitization platform for Bank BTG Pactual using TypeScript, React, Prisma ORM and MongoDB. Engineered Ethereum tokens by designing smart contracts based on deterministic functions to respond to the environment. Implemented a secure user authentication system utilizing Gmail OAuth 2.0 for seamless login.</p>
-            </div>
-        </div>
-        <div class="service-box" data-link="https://public.tableau.com/app/profile/joao.quintanilha/viz/TrackingPublicSpendingAnalyzingCongressionalExpensesinBrazil/TrackingPublicSpendingAnalyzingCongressionalExpensesinBrazil" data-images="images/projects/tableau1.png,images/projects/tableau2.png,images/projects/tableau3.png">
-            <img src="images/projects/tableau1.png" alt="Public Expenses Dashboard" class="service-image">
-            <div class="service-info">
-                <h4>Public Expenses Dashboard</h4>
-                <div class="service-tags">
-                    <span class="tag">Python</span>
-                    <span class="tag">Tableau</span>
-                </div>
-                <p>Tableau · Python · Data Visualization<br><br>
-                  Designed 4 interactive Tableau dashboards treating Brazilian governmental data. Preprocessed data in Python and generated analysis and visuals related to national accountability, enabling transparent insight into public expenditures.</p>
-            </div>
-        </div>
-        <div class="service-box" data-link="https://www.youtube.com/watch?v=tpbX9LqoCx0">
-            <img src="images/projects/classicsagent.png" alt="Palantir AI Classics Companion" class="service-image">
-            <div class="service-info">
-                <h4>AI Classics Companion</h4>
-                <div class="service-tags">
-                    <span class="tag">Foundry</span>
-                    <span class="tag">React</span>
-                    <span class="tag">TypeScript</span>
-                    <span class="tag">RAG</span>
-                </div>
-                <p>Palantir Foundry · Apr – May 2025<br><br>
-                  Built an AIP app integrating a language model to paraphrase archaic text, enhancing readability in classic literature datasets. Deployed data workflows in Foundry to extract keywords and generate context-aware footnotes using LLM logic functions. Engineered NLP pipelines to chunk, paraphrase, and summarize literary passages at scale using Palantir AIP tools.</p>
-            </div>
-        </div>
-        <div class="service-box">
-            <img src="images/projects/acm_summer.jpeg" alt="ACM Summer School on Data Science" class="service-image">
-            <div class="service-info">
-                <h4>ACM Summer School</h4>
-                <div class="service-tags">
-                    <span class="tag">Python</span>
-                    <span class="tag">R</span>
-                    <span class="tag">Graphs</span>
-                </div>
-                <p>Association of Computing Machinery · Ioannina, Greece · Jun – Jul 2025<br><br>
-                  Selected globally for competitive summer program hosted by ACM Europe Council. Completing courses in network science, sustainable ML, graph databases, and data stream processing. Building hands-on projects using NebulaStream, graph analytics, and energy-aware ML tools.</p>
-            </div>
-        </div>
-        <div class="service-box">
-            <img src="images/projects/argonne.png" alt="Argonne Lab Certificate" class="service-image">
-            <div class="service-info">
-                <h4>Argonne Lab Certificate</h4>
-                <div class="service-tags">
-                    <span class="tag">TensorFlow</span>
-                    <span class="tag">PyTorch</span>
-                    <span class="tag">Google Cloud Platform</span>
-                    <span class="tag">Deep Learning</span>
-                </div>
-                <p>Argonne National Laboratory · ALCF, Virtual · Feb – Apr 2024<br><br>
-                  Selected for a US Department of Energy training program focused on leveraging AI within supercomputing environments. Built advanced neural networks and explored LLM embedding and tokenization techniques using supercomputers. Applied parallel training methods to optimize large-scale ML tasks, enhancing computational efficiency by 50%.</p>
-            </div>
-        </div>
-        <div class="service-box">
-            <img src="images/projects/karachi.png" alt="Karachi Water Project" class="service-image">
-            <div class="service-info">
-                <h4>Karachi Water Project</h4>
-                <div class="service-tags">
-                    <span class="tag">Python</span>
-                    <span class="tag">Jupyter Notebook</span>
-                    <span class="tag">Mathematical Modeling</span>
-                </div>
-                <p>Tufts Dept. of Urban & Environmental Policy & Planning · Medford, MA · May – Jul 2024<br><br>
-                  Built the first version of an agent-based model for water consumption in Pakistan using the MESA library in Python. Reviewed 30,000+ data points on industrial water usage alongside government reports to initialize agents of the model. Developed a text classification algorithm that categorized 67% of the data, speeding up the production of charts and analyses.</p>
-            </div>
-        </div>
-        <div class="service-box" data-link="https://github.com/fifth-island/portfolio-data/blob/main/plastisseiro_portfolio.pdf">
-            <img src="images/projects/plastisseiro.webp" alt="Plastisseiro Research Project" class="service-image">
-            <div class="service-info">
-                <h4>Plastisseiro</h4>
-                <div class="service-tags">
-                    <span class="tag">Design Thinking</span>
-                    <span class="tag">Adobe Package</span>
-                    <span class="tag">Product Management</span>
-                </div>
-                <p>SENAI Vila Canaã · Goiânia, Brazil · Apr 2015 – Nov 2016<br><br>
-                  Pre-college research converting plastic bags and cups into ecological foam for upholstery. Created foam composed of recycled polypropylene and polystyrene, used in dust-mite-proof pillows. Lectured at Saint Bonaventure University and Bluefield College on sustainability. Achieved 4th place out of 300 as "Innovative Solution" at the 2016 WorldSkills Brazil.</p>
-            </div>
-        </div>
-        <div class="service-box">
-            <img src="images/projects/FIRST.jpg" alt="FIRST Robotics Mentor" class="service-image">
-            <div class="service-info">
-                <h4>FIRST Robotics Mentor</h4>
-                <div class="service-tags">
-                    <span class="tag">Project Management</span>
-                    <span class="tag">Java</span>
-                    <span class="tag">Leadership</span>
-                </div>
-                <p>FIRST Robotics · SESI Vila Canaã School · Goiânia, Brazil · May 2023 – Present<br><br>
-                  Mentor 10 teenagers for the FIRST Robotics Competition, implementing autonomous robot programs in Java and guiding ML integration with robot sensors. Mentored 15 kids for the FIRST LEGO League, teaching mechanical principles and introductory programming using LEGO EV3 toolkits — leading them to 1st place in Robot Design at the National FLL tournament.</p>
-            </div>
-        </div>
+
+        <figure class="pipeline" aria-label="Diagram of the capture-to-record pipeline">
+          <svg id="pipeline" viewBox="0 0 960 230" role="img">
+            <title>Glasses, cameras and voice feed an append-only event log, which an attribution engine turns into protocol steps, reports and registry records.</title>
+          </svg>
+        </figure>
+
+        <ul class="wins">
+          <li><b>Production AI agents.</b> The workspace agent drafts protocols from recorded sessions and fills registry tables from photos of instrument printouts, Word and Excel files.</li>
+          <li><b>Real-time voice agent.</b> Kept protocol state in sync across a LiveKit voice agent, AR glasses and a desktop console over WebSockets; the agent narrates each step from pre-generated summaries.</li>
+          <li><b>Provenance engine.</b> Every photo, clip, OCR read and table lands on the protocol step it happened in, via an append-only event log, interval-overlap matching and EXIF/filename capture-time recovery.</li>
+          <li><b>LLM reliability.</b> Streamed output, truncation checks with retry and priority input budgeting for 4–8 hour sessions; report filling scaled to 128k tokens.</li>
+          <li><b>Customers, directly.</b> Walkthroughs and onboarding with pilot biotech labs, feedback turned into scoped specs and shipped in weekly rounds, including a migration off Benchling with original IDs intact.</li>
+        </ul>
+      </article>
+
+      <div class="roles">
+        <article class="role reveal">
+          <p class="mono kicker">Sep – Dec 2025 · Austin, TX</p>
+          <h3>Tesla <span class="dim">/ Software Engineer Intern, Infrastructure</span></h3>
+          <p>A React + .NET Core developer platform for commissioning workflows across Tesla's industrial infrastructure projects.</p>
+          <dl class="mini">
+            <div><dd>200+</dd><dt>engineers & managers using it</dt></div>
+            <div><dd>27+</dd><dt>REST APIs, 80%+ test coverage</dt></div>
+            <div><dd>100k+</dd><dt>records in normalised SQL Server</dt></div>
+            <div><dd>20k</dd><dt>lines refactored into React components</dt></div>
+          </dl>
+        </article>
+        <article class="role reveal">
+          <p class="mono kicker">Jun – Aug 2025 · Braunschweig, Germany</p>
+          <h3>German Aerospace Center <span class="dim">/ DLR · SWE Intern</span></h3>
+          <p>Semantic search and RAG retrieval for a visual analytics web application used by research analysts.</p>
+          <dl class="mini">
+            <div><dd>+35%</dd><dt>search accuracy with pgvector ANN</dt></div>
+            <div><dd>12k+</dd><dt>documents, multilingual retrieval</dt></div>
+            <div><dd>CI/CD</dd><dt>REST APIs via GitHub Actions</dt></div>
+            <div><dd>React</dd><dt>+ MUI exploration dashboards</dt></div>
+          </dl>
+        </article>
+      </div>
     </div>
-</section>
+  </section>
 
-<section id="career">
-    <div class="container-typewriter">
-        <h1 class="title">.CAREER</h1>
+  <!-- RESEARCH -->
+  <section class="section research" id="research">
+    <div class="wrap">
+      <header class="sec-head"><span class="mono idx">03</span><h2>.research</h2><span class="rule"></span></header>
+      <div class="research-grid">
+        <div class="research-copy reveal">
+          <p class="mono kicker">DCASE 2026 Workshop · co-first author</p>
+          <h3>What can a coda tell us?</h3>
+          <p>Sperm whales talk in <b>codas</b>: short bursts of clicks. Their <i>rhythm</i> (the gaps between clicks) and their <i>spectrum</i> (the texture of each click) may carry different information. We built <b>DCCE</b>, a dual-channel contrastive encoder that reads the two separately before fusing them: a GRU over inter-click intervals and a CNN over log-mel spectrograms.</p>
+          <p>On 1,383 codas from the Dominica Sperm Whale Project, DCCE beat frozen bioacoustic foundation models (WhAM, AVES, BirdNET) at coda-type classification, and date-held-out tests exposed how much recording conditions inflate random-split scores.</p>
+          <dl class="mini wide">
+            <div><dd>0.865</dd><dt>coda-type macro-F1 (vs 0.722 best frozen FM)</dt></div>
+            <div><dd>1,383</dd><dt>codas · 3 social units · 22 types</dt></div>
+          </dl>
+          <div class="row">
+            <a class="btn small" href="https://dcce-research-site.vercel.app/" target="_blank" rel="noopener">Paper & results ↗</a>
+            <a class="btn small ghost" href="https://github.com/fifth-island/dual_channel_contrastive_encoding_for_whales_understanding" target="_blank" rel="noopener">Code ↗</a>
+          </div>
+        </div>
+
+        <div class="coda reveal" id="coda">
+          <div class="coda-head mono">
+            <span>coda player</span>
+            <div class="coda-types" role="group" aria-label="Choose a coda type"></div>
+          </div>
+          <div class="channel">
+            <p class="mono label">rhythm channel · inter-click intervals</p>
+            <canvas class="rhythm" aria-hidden="true"></canvas>
+          </div>
+          <div class="channel">
+            <p class="mono label">spectral channel · log-mel (illustrative)</p>
+            <canvas class="spectral" aria-hidden="true"></canvas>
+          </div>
+          <div class="channel fuse">
+            <p class="mono label">fused embedding · codas cluster by type</p>
+            <canvas class="embed" aria-hidden="true"></canvas>
+          </div>
+          <div class="coda-foot">
+            <button class="btn small solid" id="playCoda">▶ Play coda</button>
+            <p class="mono tiny">Synthesised clicks with illustrative timing, not field recordings.</p>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="timeline">
-        <div class="timeline-line"></div>
+  </section>
 
-        <div class="timeline-entry left">
-            <div class="timeline-content">
-                <span class="timeline-year">2014 – 2016</span>
-                <h4 class="timeline-title">SENAI Vila Canaã</h4>
-                <span class="timeline-role">Graphic Design Technical Program</span>
-                <span class="timeline-location">Goiânia, Brazil</span>
-            </div>
-            <div class="timeline-dot"></div>
-        </div>
-
-        <div class="timeline-entry right">
-            <div class="timeline-content">
-                <span class="timeline-year">2017 – 2018</span>
-                <h4 class="timeline-title">Liaison America</h4>
-                <span class="timeline-role">Sales Representative</span>
-                <span class="timeline-location"></span>
-            </div>
-            <div class="timeline-dot"></div>
-        </div>
-
-        <div class="timeline-entry left">
-            <div class="timeline-content">
-                <span class="timeline-year">2019</span>
-                <h4 class="timeline-title">Tufts University</h4>
-                <span class="timeline-role">Start of B.S. in Biology & Computer Science</span>
-                <span class="timeline-location">Medford, MA</span>
-            </div>
-            <div class="timeline-dot"></div>
-        </div>
-
-        <div class="timeline-entry right">
-            <div class="timeline-content">
-                <span class="timeline-year">2020</span>
-                <h4 class="timeline-title">Anheuser-Busch InBev</h4>
-                <span class="timeline-role">Data Analyst Intern</span>
-                <span class="timeline-location">São Paulo, Brazil</span>
-            </div>
-            <div class="timeline-dot"></div>
-        </div>
-
-        <div class="timeline-entry left">
-            <div class="timeline-content">
-                <span class="timeline-year">2021</span>
-                <h4 class="timeline-title">HSB</h4>
-                <span class="timeline-role">Research Assistant</span>
-                <span class="timeline-location">Bremen, Germany</span>
-            </div>
-            <div class="timeline-dot"></div>
-        </div>
-
-        <div class="timeline-entry right">
-            <div class="timeline-content">
-                <span class="timeline-year">2024</span>
-                <h4 class="timeline-title">Tufts University</h4>
-                <span class="timeline-role">B.S. in Biology & Computer Science</span>
-                <span class="timeline-location">Medford, MA</span>
-            </div>
-            <div class="timeline-dot"></div>
-        </div>
-
-        <div class="timeline-entry left">
-            <div class="timeline-content">
-                <span class="timeline-year">2024</span>
-                <h4 class="timeline-title">Tufts University</h4>
-                <span class="timeline-role">Start of M.S. in Data/Software Analytics</span>
-                <span class="timeline-location">Medford, MA</span>
-            </div>
-            <div class="timeline-dot"></div>
-        </div>
-
-        <div class="timeline-entry right">
-            <div class="timeline-content">
-                <span class="timeline-year">2025</span>
-                <h4 class="timeline-title">German Aerospace Center</h4>
-                <span class="timeline-role">Software Engineer Intern</span>
-                <span class="timeline-location">Braunschweig, Germany</span>
-            </div>
-            <div class="timeline-dot"></div>
-        </div>
-
-        <div class="timeline-entry left">
-            <div class="timeline-content">
-                <span class="timeline-year">2025</span>
-                <h4 class="timeline-title">Tesla</h4>
-                <span class="timeline-role">Software Engineer Intern</span>
-                <span class="timeline-location">Austin, TX</span>
-            </div>
-            <div class="timeline-dot"></div>
-        </div>
-
-        <div class="timeline-entry right">
-            <div class="timeline-content">
-                <span class="timeline-year">2026</span>
-                <h4 class="timeline-title">Dimenso</h4>
-                <span class="timeline-role">Software Engineer Intern</span>
-                <span class="timeline-location">Cambridge, MA</span>
-            </div>
-            <div class="timeline-dot"></div>
-        </div>
+  <!-- PROJECTS -->
+  <section class="section projects" id="projects">
+    <div class="wrap">
+      <header class="sec-head"><span class="mono idx">04</span><h2>.projects</h2><span class="rule"></span></header>
+      <div class="filters mono" role="group" aria-label="Filter projects" id="filters"></div>
+      <div class="grid" id="grid"></div>
+      <aside class="gh reveal" id="gh" hidden>
+        <p class="mono kicker">live from github.com/fifth-island · recently pushed</p>
+        <ul id="ghList"></ul>
+      </aside>
     </div>
-</section>
+  </section>
 
-<section id="cta">
-    <div class="cta-bridge">
-        <div class="cta-bridge-line"></div>
-        <div class="cta-bridge-dot"></div>
+  <!-- LOG -->
+  <section class="section log" id="log">
+    <div class="wrap">
+      <header class="sec-head"><span class="mono idx">05</span><h2>.log</h2><span class="rule"></span></header>
+      <p class="mono cmd">$ git log --graph --all <span class="dim">--author="João"</span></p>
+      <div class="lanes mono" id="lanes"></div>
+      <div class="gitlog" id="gitlog"></div>
     </div>
-    <div class="cta-content">
-        <h1 class="cta-heading" id="ctaHeading">Let's build together?</h1>
-        <div class="cta-buttons">
-            <a href="mailto:joao.quintanilha@tufts.edu" class="cta-btn">
-                <span class="cta-icon">✉</span> Email
-            </a>
-            <a href="https://www.linkedin.com/in/joaoquintanilha/" target="_blank" class="cta-btn">
-                <span class="cta-icon">↗</span> LinkedIn
-            </a>
-        </div>
+  </section>
+
+  <!-- STACK -->
+  <section class="section stack" id="stack">
+    <div class="wrap">
+      <header class="sec-head"><span class="mono idx">06</span><h2>.stack</h2><span class="rule"></span></header>
+      <div class="stack-grid" id="stackGrid"></div>
     </div>
-</section>
+  </section>
 
-  
-<!-- Project Modal -->
-<div class="project-modal-overlay" id="projectModal">
-    <div class="project-modal">
-        <button class="project-modal-close" id="modalClose">&times;</button>
-        <div class="modal-carousel" id="modalCarousel">
-            <div class="carousel-inner" id="carouselInner">
-                <img src="" alt="" class="project-modal-image" id="modalImage">
-                <button class="carousel-btn carousel-prev" id="carouselPrev">&#8249;</button>
-                <button class="carousel-btn carousel-next" id="carouselNext">&#8250;</button>
-            </div>
-            <div class="carousel-dots" id="carouselDots"></div>
-        </div>
-        <div class="project-modal-details">
-            <h2 id="modalTitle"></h2>
-            <div class="service-tags" id="modalTags"></div>
-            <p id="modalDescription"></p>
-            <a href="#" target="_blank" class="project-modal-link" id="modalLink">
-                <button class="button">View Project &rarr;</button>
-            </a>
-        </div>
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <p class="mono kicker">07 → you</p>
+      <h2 class="contact-head" id="ctaHeading">Let's build together?</h2>
+      <div class="contact-row">
+        <button class="btn solid big" id="copyEmail" data-email="joaoquintanilha2018@gmail.com">✉ <span>joaoquintanilha2018@gmail.com</span></button>
+        <a class="btn big" href="https://www.linkedin.com/in/joaoquintanilha/" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a class="btn big" href="https://github.com/fifth-island" target="_blank" rel="noopener">GitHub ↗</a>
+        <a class="btn big" href="joao_resume.pdf" download>Resume ↓</a>
+      </div>
+      <p class="mono small toast" id="toast" role="status" aria-live="polite"></p>
     </div>
-</div>
+    <footer class="foot mono">
+      <span>© <span id="year">2026</span> João Victor Quintanilha</span>
+      <span>hand-written HTML, CSS & JS · no frameworks · <a href="https://github.com/fifth-island/fifth-island-portfolio" target="_blank" rel="noopener">source</a></span>
+    </footer>
+  </section>
 
-<script>
-  // Smooth scroll to sections
-  document.querySelectorAll('a[href^="#"]:not(.project-modal-link)').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-          e.preventDefault();
-          document.querySelector(this.getAttribute('href')).scrollIntoView({
-              behavior: 'smooth'
-          });
-      });
-  });
+  <!-- PROJECT MODAL -->
+  <div class="modal" id="modal" hidden>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+      <button class="modal-x" id="mClose" aria-label="Close">×</button>
+      <div class="m-media" id="mMedia"></div>
+      <div class="m-body">
+        <p class="mono kicker" id="mContext"></p>
+        <h3 id="mTitle"></h3>
+        <p class="m-award mono" id="mAward" hidden></p>
+        <p id="mBody"></p>
+        <dl class="mini" id="mMetrics"></dl>
+        <div class="tags mono" id="mTags"></div>
+        <div class="row" id="mLinks"></div>
+      </div>
+    </div>
+  </div>
 
-  // Project Modal with Carousel
-  (function() {
-    const overlay = document.getElementById('projectModal');
-    const modalImage = document.getElementById('modalImage');
-    const modalTitle = document.getElementById('modalTitle');
-    const modalTags = document.getElementById('modalTags');
-    const modalDescription = document.getElementById('modalDescription');
-    const modalLink = document.getElementById('modalLink');
-    const modalClose = document.getElementById('modalClose');
-    const modalCarousel = document.getElementById('modalCarousel');
-    const carouselPrev = document.getElementById('carouselPrev');
-    const carouselNext = document.getElementById('carouselNext');
-    const carouselDots = document.getElementById('carouselDots');
-    const carouselInner = document.getElementById('carouselInner');
+  <!-- COMMAND PALETTE -->
+  <div class="palette" id="palette" hidden>
+    <div class="palette-card" role="dialog" aria-modal="true" aria-label="Command palette">
+      <div class="palette-input mono"><span>›</span><input id="pInput" placeholder="type a command: projects, resume, coda…" autocomplete="off" spellcheck="false" aria-controls="pList"></div>
+      <ul id="pList" role="listbox"></ul>
+      <p class="mono tiny palette-hint">↑↓ to move · enter to run · esc to close</p>
+    </div>
+  </div>
 
-    let carouselImages = [];
-    let carouselSizes = [];
-    let currentIndex = 0;
-
-    function updateCarousel() {
-      modalImage.src = carouselImages[currentIndex];
-      const size = carouselSizes[currentIndex] ? carouselSizes[currentIndex] + '%' : '100%';
-      modalImage.style.width = '100%';
-      carouselInner.style.width = size;
-      // Update dots
-      carouselDots.querySelectorAll('.carousel-dot').forEach((dot, i) => {
-        dot.classList.toggle('active', i === currentIndex);
-      });
-    }
-
-    function setupCarousel(images, sizes) {
-      carouselImages = images;
-      carouselSizes = sizes || [];
-      currentIndex = 0;
-      carouselDots.innerHTML = '';
-
-      if (images.length > 1) {
-        modalCarousel.classList.add('has-carousel');
-        images.forEach((_, i) => {
-          const dot = document.createElement('span');
-          dot.classList.add('carousel-dot');
-          if (i === 0) dot.classList.add('active');
-          dot.addEventListener('click', () => { currentIndex = i; updateCarousel(); });
-          carouselDots.appendChild(dot);
-        });
-      } else {
-        modalCarousel.classList.remove('has-carousel');
-      }
-
-      updateCarousel();
-    }
-
-    carouselPrev.addEventListener('click', (e) => {
-      e.stopPropagation();
-      currentIndex = (currentIndex - 1 + carouselImages.length) % carouselImages.length;
-      updateCarousel();
-    });
-
-    carouselNext.addEventListener('click', (e) => {
-      e.stopPropagation();
-      currentIndex = (currentIndex + 1) % carouselImages.length;
-      updateCarousel();
-    });
-
-    // Open modal on card click
-    document.querySelectorAll('.service-box').forEach(card => {
-      card.addEventListener('click', function(e) {
-        if (e.target.closest('a')) return;
-
-        const img = card.querySelector('.service-image');
-        const title = card.querySelector('.service-info h4');
-        const tags = card.querySelectorAll('.service-tags .tag');
-        const desc = card.querySelector('.service-info p');
-        const link = card.getAttribute('data-link');
-        const dataImages = card.getAttribute('data-images');
-        const dataImageSizes = card.getAttribute('data-image-sizes');
-
-        // Setup carousel or single image
-        if (dataImages) {
-          const sizes = dataImageSizes ? dataImageSizes.split(',').map(Number) : [];
-          setupCarousel(dataImages.split(','), sizes);
-        } else {
-          setupCarousel([img.src], [100]);
-        }
-
-        modalImage.alt = img.alt;
-        modalTitle.textContent = title.textContent;
-
-        modalTags.innerHTML = '';
-        tags.forEach(tag => {
-          const clone = tag.cloneNode(true);
-          modalTags.appendChild(clone);
-        });
-
-        modalDescription.innerHTML = desc.innerHTML;
-
-        if (link) {
-          modalLink.href = link;
-          modalLink.classList.add('visible');
-        } else {
-          modalLink.href = '#';
-          modalLink.classList.remove('visible');
-        }
-
-        overlay.classList.add('active');
-        document.body.style.overflow = 'hidden';
-      });
-    });
-
-    // Close modal
-    function closeModal() {
-      overlay.classList.remove('active');
-      document.body.style.overflow = '';
-    }
-
-    modalClose.addEventListener('click', closeModal);
-
-    overlay.addEventListener('click', function(e) {
-      if (e.target === overlay) closeModal();
-    });
-
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape') closeModal();
-      if (!overlay.classList.contains('active')) return;
-      if (e.key === 'ArrowLeft') { currentIndex = (currentIndex - 1 + carouselImages.length) % carouselImages.length; updateCarousel(); }
-      if (e.key === 'ArrowRight') { currentIndex = (currentIndex + 1) % carouselImages.length; updateCarousel(); }
-    });
-  })();
-
-  // ===== Career Timeline — typewriter reveal + scroll-driven line =====
-  (function() {
-    const timeline = document.querySelector('.timeline');
-    const timelineLine = document.querySelector('.timeline-line');
-    const entries = document.querySelectorAll('.timeline-entry');
-
-    if (!timeline || !entries.length) return;
-
-    // Typewriter — returns a Promise that resolves when done
-    function typeWriter(element, text, speed) {
-      return new Promise(resolve => {
-        if (!text) { resolve(); return; }
-        let i = 0;
-        element.textContent = '';
-        element.classList.add('typing');
-        function type() {
-          if (i < text.length) {
-            element.textContent += text.charAt(i);
-            i++;
-            setTimeout(type, speed);
-          } else {
-            element.classList.remove('typing');
-            resolve();
-          }
-        }
-        type();
-      });
-    }
-
-    function wait(ms) {
-      return new Promise(resolve => setTimeout(resolve, ms));
-    }
-
-    // Reveal an entry with sequential typewriter
-    async function revealEntry(entry) {
-      const content = entry.querySelector('.timeline-content');
-      const dot = entry.querySelector('.timeline-dot');
-      const year = entry.querySelector('.timeline-year');
-      const title = entry.querySelector('.timeline-title');
-      const role = entry.querySelector('.timeline-role');
-      const loc = entry.querySelector('.timeline-location');
-
-      dot.classList.add('active');
-      content.classList.add('visible');
-
-      await typeWriter(year, year.dataset.text, 50);
-      await wait(150);
-      await typeWriter(title, title.dataset.text, 40);
-      if (role.dataset.text) {
-        await wait(100);
-        await typeWriter(role, role.dataset.text, 25);
-      }
-      if (loc.dataset.text) {
-        await wait(100);
-        await typeWriter(loc, loc.dataset.text, 25);
-      }
-    }
-
-    // Store original text, clear elements for typewriter
-    entries.forEach(entry => {
-      entry.querySelectorAll('.timeline-year, .timeline-title, .timeline-role, .timeline-location').forEach(el => {
-        el.dataset.text = el.textContent;
-        el.textContent = '';
-      });
-    });
-
-    // IntersectionObserver triggers typewriter when entry scrolls into view
-    const observer = new IntersectionObserver((observed) => {
-      observed.forEach(o => {
-        if (o.isIntersecting) {
-          revealEntry(o.target);
-          observer.unobserve(o.target);
-        }
-      });
-    }, { threshold: 0.3 });
-
-    entries.forEach(entry => observer.observe(entry));
-
-    // Scroll-driven green line growth
-    function updateLine() {
-      const rect = timeline.getBoundingClientRect();
-      const trigger = window.innerHeight * 0.6;
-      const progress = (trigger - rect.top) / rect.height;
-      const clamped = Math.max(0, Math.min(1, progress));
-      timelineLine.style.height = (clamped * 100) + '%';
-
-      // Once green line completes, grow the black bridge line in CTA
-      const bridgeLine = document.querySelector('.cta-bridge-line');
-      const bridgeDot = document.querySelector('.cta-bridge-dot');
-      if (bridgeLine) {
-        if (clamped >= 1) {
-          // How far past full the green line has scrolled (in px)
-          const overshoot = (trigger - rect.top) - rect.height;
-          const bridgeMax = 60;
-          const growRange = 120; // px of scroll to fully grow the bridge
-          const bridgeClamped = Math.max(0, Math.min(1, overshoot / growRange));
-          bridgeLine.style.height = (bridgeClamped * bridgeMax) + 'px';
-          if (bridgeClamped >= 1) {
-            bridgeDot.style.opacity = '1';
-            bridgeDot.style.transform = 'scale(1)';
-          } else {
-            bridgeDot.style.opacity = '0';
-            bridgeDot.style.transform = 'scale(0)';
-          }
-        } else {
-          bridgeLine.style.height = '0px';
-          bridgeDot.style.opacity = '0';
-          bridgeDot.style.transform = 'scale(0)';
-        }
-      }
-    }
-
-    window.addEventListener('scroll', updateLine);
-    window.addEventListener('resize', updateLine);
-    updateLine();
-  })();
-
-  // ===== CTA typewriter =====
-  (function() {
-    const heading = document.getElementById('ctaHeading');
-    const buttons = document.querySelector('.cta-buttons');
-    if (!heading) return;
-
-    const text = heading.textContent;
-    heading.textContent = '';
-
-    let revealed = false;
-
-    function typeWriter(el, str, speed) {
-      return new Promise(resolve => {
-        let i = 0;
-        el.textContent = '';
-        el.classList.add('typing');
-        function type() {
-          if (i < str.length) {
-            el.textContent += str.charAt(i);
-            i++;
-            setTimeout(type, speed);
-          } else {
-            el.classList.remove('typing');
-            resolve();
-          }
-        }
-        type();
-      });
-    }
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(async (entry) => {
-        if (entry.isIntersecting && !revealed) {
-          revealed = true;
-          await typeWriter(heading, text, 55);
-          if (buttons) buttons.classList.add('visible');
-          observer.unobserve(heading);
-        }
-      });
-    }, { threshold: 0.5 });
-
-    observer.observe(heading);
-  })();
-</script>
-
-
-
+  <script type="module" src="js/main.js"></script>
 </body>
 </html>
